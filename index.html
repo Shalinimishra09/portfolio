@@ -109,6 +109,24 @@
   <footer class="text-center text-sm py-6 text-gray-500">
     © 2025 Shalini Mishra. 
   </footer>
+
+   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const projectLinks = {
+      'Portfolio Website': 'https://shalinimishra09.github.io/portfolio/',
+      'Chat-bot': 'https://shalinimishra09.github.io/chatbot/'
+    };
+
+    document.querySelectorAll('#projects .bg-purple-100, #projects .bg-yellow-100').forEach(project => {
+      project.addEventListener('click', () => {
+        const title = project.querySelector('h4')?.innerText;
+        if (projectLinks[title]) {
+          window.open(projectLinks[title], '_blank');
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
 
